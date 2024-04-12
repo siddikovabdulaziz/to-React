@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* Navbar */
+body {
+  --color1: #FFF;
+  --color2: #181818;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.nav-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  position: relative;
+  background-color: var(--color2);
+  padding: 12px 20px;
+}
+
+.logo img {
+  width: 45px;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu li {
+  padding-left: 30px;
+}
+
+.menu li a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color1);
+  text-align: center;
+  transition: 0.15s ease-in-out;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color1);
+  transition: 0.15s ease-in-out;
+}
+
+.menu li a:hover:after {
+  width: 100%;
+}
+
+.open-menu,
+.close-menu {
+  position: absolute;
+  color: var(--color1);
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: none;
+}
+
+.open-menu {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.close-menu {
+  top: 20px;
+  right: 20px;
+}
+
+#check {
+  display: none;
+}
+
+/* Carusel */
+.container {
+  position: relative;
+}
+
+
+
+.wrapper {
+  width: 100%;
+  height: 48vw;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+}
+
+.wrapper-holder {
+  display: grid;
+  grid-template-columns: repeat(4, 100%);
+  height: 100%;
+  width: 100%;
+  animation: slider 20s ease-in-out infinite alternate;
+}
+
+#slider-img-1 {
+  width: 100%;
+  height: 100%;
+  background-image: url(img/alg.logo.jpg);
+  background-position: center;
+
+}
+
+#slider-img-2 {
+
+  background-image: url(img/22.\ Windows\ Logo.jpg);
+  background-position: center;
+
+}
+
+#slider-img-3 {
+  background-image: url(img/wallpaper-1920x1080-2.jpg);
+  background-position: center;
+
+}
+
+#slider-img-4 {
+  background-image: url(img/1648017308_68-kartinkin-net-p-kartinki-na-fon-noutbuka-82.jpg);
+  background-position: center;
+}
+
+.button {
+  background-color: white;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  display: inline-block;
+  margin: 3.rem;
+}
+
+.button-holder {
+  position: absolute;
+  left: 45%;
+  bottom: 0%;
+}
+
+.button:hover {
+  box-shadow: rgba(216, 13, 13, 0.6);
+}
+
+@keyframes slider {
+  0% {
+    transform: translateX(0%);
+  }
+
+  10% {
+    transform: translateX(-100%);
+  }
+
+  20% {
+    transform: translateX(-100%);
+  }
+
+  30% {
+    transform: translateX(-200%);
+  }
+
+  40% {
+    transform: translateX(-200%);
+  }
+
+  50% {
+    transform: translateX(-200%);
+  }
+
+  60% {
+    transform: translateX(-300%);
+  }
+
+  70% {
+    transform: translateX(-300%);
+  }
+
+  80% {
+    transform: translateX(-300%);
+  }
+
+  90% {
+    transform: translateX(-0%);
+  }
+
+  100% {
+    transform: translateX(-0%);
+  }
+
+}
+
+/* Faq bars */
+.carousel-item img {
+  height: 600px;
+  object-fit: cover;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5em;
+  margin: 1em;
+
+}
+
+.faq__section {
+  padding: 4em 2em;
+}
+
+.faq {
+  list-style: none;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.faq li {
+  background: #f2f2f2;
+  border-bottom: 1px solid #ccc;
+}
+
+.faq li:first-child {
+  border-top: 1px solid #ccc;
+}
+
+.q {
+  padding: 1em 0;
+  border-left: 10px #f2f2f2 solid;
+  cursor: pointer;
+}
+
+.q:hover,
+.qhover .arrow {
+  border-left-color: #0569ff;
+}
+
+.arrow {
+  display: inline-block;
+  margin: 0 0.5em;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  transition: 0.3s;
+}
+
+.faq p {
+  color: #888;
+  line-height: 25px;
+
+}
+
+.a {
+  overflow: hidden;
+  height: 0;
+  padding: 0 1em 0 3.3em;
+}
+
+.a-opened {
+  padding: 1em 1em 2em 3.3em;
+  height: initial;
+}
+
+.arrow-rotated {
+  transform: rotate(90deg);
+}
